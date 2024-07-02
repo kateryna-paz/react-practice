@@ -26,7 +26,7 @@ function App() {
     <div
       className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
       style={{
-        backgroundImage: `url(https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)`,
+        backgroundImage: `url(https://images.pexels.com/photos/531360/pexels-photo-531360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)`,
       }}
     >
       <div className="w-full">
@@ -50,14 +50,16 @@ function App() {
             <div className="relative w-full h-0.5">
               <button
                 onClick={swap}
-                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
+                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 
+                border-2 border-white rounded-md bg-indigo-600
+                text-white px-4 py-1"
               >
                 Swap
               </button>
             </div>
             <div className="w-full mb-1">
               <InputBox
-                label="To"
+                label={`To   `}
                 amount={convertedAmount}
                 amountDisabled
                 currencyOptions={options}
@@ -66,7 +68,7 @@ function App() {
               ></InputBox>
             </div>
             <button
-              className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg"
+              className="w-full bg-indigo-600 text-white mt-3 px-4 py-3 rounded-lg"
               type="submit"
             >
               Convert {from} to {to}

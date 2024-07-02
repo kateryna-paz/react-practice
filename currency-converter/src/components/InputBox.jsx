@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useId } from "react";
+import { useId } from "react";
 
 const InputBox = ({
   label,
@@ -38,7 +38,7 @@ const InputBox = ({
           }}
         />
       </div>
-      <div className="w-1/2 flex flex-wrap justify-end text-right">
+      <div className="w-1/2 flex flex-wrap justify-end text-right ml-4">
         <p className="text-black/40 mb-2 w-full">Currency Type</p>
         <select
           className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"

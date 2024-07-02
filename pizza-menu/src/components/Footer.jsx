@@ -1,20 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Footer = (props) => {
-  const [hour] = useState(new Date().getHours());
-  const openHour = 10;
-  const closeHour = 22;
-
-  const isOpen = `Now we are ${
-    hour >= openHour && hour <= closeHour ? "open" : "closed"
-  }.`;
-
   return (
     <div>
       <footer className="footer">
-        <h3>
-          <i>{hour} hours.</i> {isOpen}
-        </h3>
+        <div>
+          <div className="footer-text">
+            <p>Follow us on social media for updates and promotions!</p>
+            <p>
+              Contact us at: <span>+(43)039-42-67</span>
+            </p>
+            <p>
+              Address: <span> 123 Pizza Street, Foodville, USA </span>
+            </p>
+          </div>
+          <ul className="footer-links">
+            <li>
+              <a href="https://www.instagram.com/">
+                Instagram
+                <img
+                  src="icons/1_Instagram_colored_svg_1-512.webp"
+                  alt="instagram_icon"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.telegram.com/">
+                Telegram
+                <img src="icons/telegram.png" alt="telegram_icon" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/">
+                YouTube
+                <img src="icons/youtube.png" alt="youtube_icon" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </footer>
     </div>
   );
