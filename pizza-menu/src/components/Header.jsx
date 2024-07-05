@@ -21,16 +21,16 @@ const Header = (props) => {
 
   const isOpen = `${
     time.split(":")[0] >= openHour && time.split(":")[0] < closeHour
-      ? "We're open and ready to take your orders! 🍕"
-      : "Sorry, we're closed now. See you tomorrow for more delicious pizzas! 🍕"
+      ? "We're open and ready to take your orders!"
+      : "Sorry, we're closed now. See you tomorrow for more delicious pizzas!"
   }`;
 
   return (
     <header className="header">
-      <h1>Fast React Pizza Co.</h1>
+      <h1>Fast React Pizza</h1>
       <h3>
         <i>
-          It is {time}. {isOpen}
+          It is {time}. {isOpen} 🍕
         </i>
       </h3>
     </header>

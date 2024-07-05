@@ -1,13 +1,20 @@
 import React from "react";
 
 const Pizza = ({ pizza }) => {
+  // if (pizza.soldOut) return null;
   return (
-    <div className="pizza">
+    <div className={`pizza ${pizza.soldOut ? "sold-out" : ""}`}>
       <img src={pizza.photoName} alt={pizza.name} />
       <div>
         <div className="pizza-header">
           <h3>{pizza.name}</h3>
-          <p>{pizza.price}$</p>
+          {pizza.soldOut ? (
+            <p>
+              <b>SOLD OUT</b>
+            </p>
+          ) : (
+            <p> {pizza.price}$</p>
+          )}
         </div>
 
         <span>{pizza.ingredients}</span>
