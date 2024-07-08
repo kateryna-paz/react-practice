@@ -35,12 +35,24 @@ function App() {
     );
   };
 
+  const clearList = () => {
+    const answer = window.confirm(
+      "Are you really want to delete all of your items?"
+    );
+    if (answer) setItems([]);
+  };
+
   return (
     <div className="App">
       <Header />
       <Form addItem={addItem} />
-      <PackingList items={items} deleteItem={deleteItem} packItem={packItem} />
-      <Stats />
+      <PackingList
+        items={items}
+        deleteItem={deleteItem}
+        packItem={packItem}
+        clearList={clearList}
+      />
+      <Stats items={items} />
     </div>
   );
 }
