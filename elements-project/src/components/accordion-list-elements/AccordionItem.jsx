@@ -1,11 +1,10 @@
 import React from "react";
-import { useState } from "react";
 
-const AccordianItem = ({ num, item }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const AccordianItem = ({ num, item, curOpen, onOpen }) => {
+  const isOpen = num === curOpen;
 
   const handleOpen = () => {
-    setIsOpen((isOpen) => !isOpen);
+    onOpen(isOpen ? null : num);
   };
   return (
     <li className={`item ${isOpen ? "open" : ""}`} onClick={handleOpen}>
